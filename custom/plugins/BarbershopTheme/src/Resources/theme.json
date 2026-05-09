@@ -1,0 +1,68 @@
+{
+  "name": "BarbershopTheme",
+  "author": "Custom",
+  "views": [
+    "@Storefront",
+    "@Plugins",
+    "@BarbershopTheme"
+  ],
+  "style": [
+    "@Storefront",
+    {
+      "app/storefront/src/scss/base.scss": {
+        "resolve": {
+          "vendor": "app/storefront/vendor"
+        }
+      }
+    }
+  ],
+  "script": [],
+  "asset": [
+    "app/storefront/src/assets"
+  ],
+  "configInheritance": [
+    "@Storefront"
+  ],
+  "config": {
+    "tabs": {
+      "colors": {
+        "label": {
+          "en-GB": "Colors",
+          "de-DE": "Farben"
+        }
+      }
+    },
+    "blocks": {
+      "themeColors": {
+        "label": {
+          "en-GB": "Theme colors",
+          "de-DE": "Theme-Farben"
+        }
+      }
+    },
+    "fields": {
+      "sw-color-brand-primary": {
+        "label": {
+          "en-GB": "Primary brand color",
+          "de-DE": "Primaere Markenfarbe"
+        },
+        "type": "color",
+        "value": "#ff6c00",
+        "editable": true,
+        "tab": "colors",
+        "block": "themeColors"
+      },
+      "sw-color-brand-secondary": {
+        "label": {
+          "en-GB": "Secondary brand color",
+          "de-DE": "Sekundaere Markenfarbe"
+        },
+        "type": "color",
+        "value": "#303030",
+        "editable": true,
+        "tab": "colors",
+        "block": "themeColors"
+      }
+    }
+  }
+}

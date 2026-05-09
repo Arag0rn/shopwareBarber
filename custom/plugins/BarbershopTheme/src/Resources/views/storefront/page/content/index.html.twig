@@ -1,0 +1,197 @@
+{% sw_extends '@Storefront/storefront/page/content/index.html.twig' %}
+
+{% block base_main_inner %}
+    <main class="bs-page">
+        <section class="bs-hero" id="top">
+            <aside class="bs-hero__rail">
+                <a class="bs-logo" href="#top" aria-label="BarberShop home">
+                    <span>BS</span>
+                </a>
+                <div class="bs-hero__social">
+                    <a href="#portfolio">Instagram</a>
+                    <a href="#portfolio">Youtube</a>
+                </div>
+            </aside>
+
+            <div class="bs-hero__stage">
+                <header class="bs-nav">
+                    <nav class="bs-nav__links" aria-label="Primary">
+                        <a href="#about">About</a>
+                        <a href="#services">Services and prices</a>
+                        <a href="#barbers">Barbers</a>
+                        <a href="#contacts">Contacts</a>
+                    </nav>
+                    <div class="bs-nav__actions">
+                        <a href="tel:+380441111111">+38 044 111 11 11</a>
+                        <a class="bs-button bs-button--light" href="#booking">Online-booking</a>
+                        <button class="bs-menu-toggle" type="button" aria-label="Open menu" aria-controls="barbershop-mobile-menu" aria-expanded="false" data-bs-menu-open>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </header>
+
+                <div class="bs-mobile-menu" id="barbershop-mobile-menu" aria-hidden="true" data-bs-menu>
+                    <button class="bs-mobile-menu__backdrop" type="button" aria-label="Close menu" data-bs-menu-close></button>
+                    <aside class="bs-mobile-menu__panel" aria-label="Mobile menu">
+                        <button class="bs-mobile-menu__close" type="button" aria-label="Close menu" data-bs-menu-close>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <nav class="bs-mobile-menu__links" aria-label="Mobile primary">
+                            <a class="is-active" href="#about" data-bs-menu-link>About</a>
+                            <a href="#services" data-bs-menu-link>Services and prices</a>
+                            <a href="#barbers" data-bs-menu-link>Barbers</a>
+                            <a href="#contacts" data-bs-menu-link>Contacts</a>
+                        </nav>
+                        <div class="bs-mobile-menu__booking">
+                            <a href="tel:+380441111111">+38 044 111 11 11</a>
+                            <a class="bs-button" href="#booking" data-bs-menu-link>Online-booking</a>
+                        </div>
+                        <div class="bs-mobile-menu__social">
+                            <span aria-hidden="true"></span>
+                            <div>
+                                <a href="#portfolio" data-bs-menu-link>Instagram</a>
+                                <a href="#portfolio" data-bs-menu-link>Youtube</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+
+                <div class="bs-hero__content">
+                    <p class="bs-kicker bs-kicker--muted">A hair salon for men in Kyiv</p>
+                    <h1>BarberShop</h1>
+                    <p>We are experts in trendy men's haircuts. We work quickly, carefully and with style.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bs-section bs-about" id="about">
+            <div class="bs-container bs-about__grid">
+                <div class="bs-about__media" aria-hidden="true">
+                    <div class="bs-photo bs-photo--about-a"></div>
+                    <div class="bs-photo bs-photo--about-b"></div>
+                </div>
+                <div class="bs-copy">
+                    <p class="bs-kicker">About</p>
+                    <h2>Best Barbershop in your city</h2>
+                    <p class="bs-lead">If you want to add more confidence to your image, you should definitely visit us.</p>
+                    <p>We are a team that never stops learning, follows trends, and treats every cut as exact craft. Our masters work fast, carefully, and with style.</p>
+                    <a class="bs-button" href="#booking">Online-booking</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="bs-section bs-services" id="services">
+            <div class="bs-container">
+                <p class="bs-kicker bs-kicker--muted">Services and prices</p>
+                <h2>Spend your time with the best masters</h2>
+
+                <div class="bs-price-grid">
+                    <ul class="bs-price-list">
+                        <li><span>Men's haircut</span><strong>from 300 uah.</strong></li>
+                        <li><span>Beard trim</span><strong>from 300 uah.</strong></li>
+                        <li><span>Mustache trim</span><strong>from 200 uah.</strong></li>
+                        <li><span>Straight razor shave</span><strong>from 200 uah.</strong></li>
+                    </ul>
+                    <ul class="bs-price-list bs-price-list--dark">
+                        <li><span>Trainee's haircut</span><strong>from 50 uah.</strong></li>
+                        <li><span>Haircut under the nozzle</span><strong>from 200 uah.</strong></li>
+                        <li><span>Children's haircut (0-12 y.o.)</span><strong>from 300 uah.</strong></li>
+                        <li><span>Camouflage of gray hair</span><strong>from 200 uah.</strong></li>
+                    </ul>
+                </div>
+
+                <a class="bs-button bs-button--light" href="#booking">Online-booking</a>
+            </div>
+        </section>
+
+        <section class="bs-section bs-why">
+            <div class="bs-container bs-why__grid">
+                <div class="bs-stats" aria-label="Barbershop statistics">
+                    <div class="bs-stat"><strong>600<sup>+</sup></strong><span>Satisfied customers per day</span></div>
+                    <div class="bs-stat"><strong>50<sup>+</sup></strong><span>Awards for excellent service</span></div>
+                    <div class="bs-stat"><strong>20<sup>+</sup></strong><span>Kyiv's best barbers</span></div>
+                    <div class="bs-stat"><strong>100<sup>+</sup></strong><span>Gifts for regular customers</span></div>
+                </div>
+                <div class="bs-copy">
+                    <p class="bs-kicker">Old traditional school</p>
+                    <h2>Why people come to us?</h2>
+                    <p class="bs-lead">Only good things are said about us. Every guest gets attention, precision, and atmosphere.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bs-section bs-barbers" id="barbers">
+            <div class="bs-container">
+                <p class="bs-kicker">For true enjoyers of the atmosphere</p>
+                <h2>Our barbers</h2>
+                <div class="bs-card-grid">
+                    <article class="bs-barber-card">
+                        <div class="bs-photo bs-photo--barber-a"></div>
+                        <h3>John Smith</h3>
+                        <p>Extreme Barber</p>
+                        <div class="bs-icons"><a href="#">In</a><a href="#">Tw</a><a href="#">Fb</a><a href="#">Ln</a></div>
+                    </article>
+                    <article class="bs-barber-card">
+                        <div class="bs-photo bs-photo--barber-b"></div>
+                        <h3>Michele Doe</h3>
+                        <p>Extreme Barber</p>
+                        <div class="bs-icons"><a href="#">In</a><a href="#">Tw</a><a href="#">Fb</a><a href="#">Ln</a></div>
+                    </article>
+                    <article class="bs-barber-card">
+                        <div class="bs-photo bs-photo--barber-c"></div>
+                        <h3>Alan Black</h3>
+                        <p>Extreme Barber</p>
+                        <div class="bs-icons"><a href="#">In</a><a href="#">Tw</a><a href="#">Fb</a><a href="#">Ln</a></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="bs-section bs-portfolio" id="portfolio">
+            <div class="bs-container">
+                <p class="bs-kicker">In Latin, "barba" means "beard"</p>
+                <div class="bs-gallery">
+                    <div class="bs-photo bs-photo--portfolio-a"></div>
+                    <div class="bs-photo bs-photo--portfolio-b"></div>
+                    <div class="bs-photo bs-photo--portfolio-c"></div>
+                    <div class="bs-photo bs-photo--portfolio-d"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bs-contact" id="contacts">
+            <div class="bs-contact__booking" id="booking">
+                <h2>Online-booking</h2>
+                <form class="bs-form">
+                    <div class="bs-form__row">
+                        <label><span>Name*</span><input type="text" name="name"></label>
+                        <label><span>Phone*</span><input type="tel" name="phone"></label>
+                    </div>
+                    <label><span>Message</span><textarea name="message" rows="4"></textarea></label>
+                    <button class="bs-button bs-button--light" type="submit">Send</button>
+                </form>
+            </div>
+            <div class="bs-contact__info">
+                <h2>Contacts</h2>
+                <address>
+                    <a href="#">st. Vasilkivska, 7A Kyiv, 08132</a>
+                    <a href="tel:+380441111111">+38 044 111 11 11</a>
+                    <a href="mailto:barbershop@email.com">barbershop@email.com</a>
+                </address>
+                <p class="bs-kicker bs-kicker--muted">Working hours</p>
+                <p>Every day from 9:00 to 22:00</p>
+            </div>
+        </section>
+
+        <footer class="bs-footer">
+            <p>Copyright 2020</p>
+            <div>
+                <a href="#portfolio">Instagram</a>
+                <a href="#portfolio">Youtube</a>
+            </div>
+        </footer>
+    </main>
+{% endblock %}

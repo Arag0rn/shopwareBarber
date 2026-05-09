@@ -1,0 +1,26 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{% block base_head %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/barbershoptheme/css/barbershop-theme.css', 'asset') }}">
+{% endblock %}
+
+{% block base_body_classes %}
+    {{ parent() }} is-barbershop-theme
+{% endblock %}
+
+{% block base_navigation %}{% endblock %}
+
+{% block base_offcanvas_navigation %}{% endblock %}
+
+{% block base_scroll_up %}{% endblock %}
+
+{% block base_cookie_permission %}{% endblock %}
+
+{% block base_pseudo_modal %}{% endblock %}
+
+
+{% block base_body_script %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/barbershoptheme/js/barbershop-menu.js', 'asset') }}" defer></script>
+{% endblock %}

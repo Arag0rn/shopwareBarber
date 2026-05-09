@@ -1,0 +1,26 @@
+{
+  "name": "custom/barbershop-theme",
+  "description": "Barbershop storefront theme plugin for Shopware 6.",
+  "type": "shopware-platform-plugin",
+  "license": "proprietary",
+  "autoload": {
+    "psr-4": {
+      "BarbershopTheme\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "BarbershopTheme\\BarbershopTheme",
+    "label": {
+      "en-GB": "Barbershop Theme",
+      "de-DE": "Barbershop Theme"
+    },
+    "description": {
+      "en-GB": "Storefront theme based on the Barbershop Figma design.",
+      "de-DE": "Storefront-Theme auf Basis des Barbershop-Figma-Designs."
+    }
+  },
+  "require": {
+    "shopware/core": "^6.5",
+    "shopware/storefront": "^6.5"
+  }
+}
