@@ -1,0 +1,31 @@
+{
+    "barbershop-barber": {
+        "general": {
+            "mainMenuItemGeneral": "Barbers",
+            "descriptionTextModule": "Verwalte Barbers für deinen Barbershop"
+        },
+        "list": {
+            "title": "Barbers",
+            "buttonAddBarber": "Barber hinzufügen",
+            "columnName": "Name",
+            "columnPosition": "Position",
+            "columnInstagram": "Instagram",
+            "columnFacebook": "Facebook"
+        },
+        "detail": {
+            "titleCreate": "Neuer Barber",
+            "titleEdit": "Barber bearbeiten",
+            "labelName": "Name",
+            "placeholderName": "Barber-Namen eingeben...",
+            "labelPosition": "Position",
+            "placeholderPosition": "z.B. Extreme Barber",
+            "labelPhoto": "Foto",
+            "labelInstagram": "Instagram",
+            "placeholderInstagram": "Instagram-Profil URL",
+            "labelFacebook": "Facebook",
+            "placeholderFacebook": "Facebook-Profil URL",
+            "buttonCancel": "Abbrechen",
+            "buttonSave": "Speichern"
+        }
+    }
+}

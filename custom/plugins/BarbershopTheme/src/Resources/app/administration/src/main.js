@@ -1,0 +1,1 @@
+import './module/barbershop-barber';

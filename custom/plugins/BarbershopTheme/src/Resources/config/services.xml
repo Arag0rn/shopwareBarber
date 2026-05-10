@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="BarbershopTheme\Core\Content\Barber\BarberDefinition">
+            <tag name="shopware.entity.definition" entity="barbershop_barber"/>
+        </service>
+
+        <service id="BarbershopTheme\Storefront\Page\BarberPageSubscriber">
+            <argument type="service" id="barbershop_barber.repository"/>
+            <tag name="kernel.event_subscriber"/>
+        </service>
+    </services>
+</container>

@@ -1,0 +1,98 @@
+{% block barbershop_barber_detail %}
+<sw-page class="barbershop-barber-detail">
+    {% block barbershop_barber_detail_header %}
+    <template #smart-bar-header>
+        <h2>{{ isCreateMode ? $tc('barbershop-barber.detail.titleCreate') : $tc('barbershop-barber.detail.titleEdit') }}</h2>
+    </template>
+    {% endblock %}
+
+    {% block barbershop_barber_detail_actions %}
+    <template #smart-bar-actions>
+        {% block barbershop_barber_detail_actions_cancel %}
+        <sw-button @click="onClickCancel">
+            {{ $tc('barbershop-barber.detail.buttonCancel') }}
+        </sw-button>
+        {% endblock %}
+
+        {% block barbershop_barber_detail_actions_save %}
+        <sw-button-process
+            class="barbershop-barber-detail__save-action"
+            :isLoading="isLoading"
+            :processSuccess="processSuccess"
+            variant="primary"
+            @process-finish="saveFinish"
+            @click="onClickSave"
+        >
+            {{ $tc('barbershop-barber.detail.buttonSave') }}
+        </sw-button-process>
+        {% endblock %}
+    </template>
+    {% endblock %}
+
+    {% block barbershop_barber_detail_content %}
+    <template #content>
+        <sw-card-view>
+            {% block barbershop_barber_detail_content_card %}
+            <sw-card v-if="barber" :isLoading="isLoading">
+                {% block barbershop_barber_detail_content_field_name %}
+                <sw-text-field
+                    v-model="barber.name"
+                    :label="$tc('barbershop-barber.detail.labelName')"
+                    :placeholder="$tc('barbershop-barber.detail.placeholderName')"
+                    required
+                    validation="required"
+                >
+                </sw-text-field>
+                {% endblock %}
+
+                {% block barbershop_barber_detail_content_field_position %}
+                <sw-text-field
+                    v-model="barber.position"
+                    :label="$tc('barbershop-barber.detail.labelPosition')"
+                    :placeholder="$tc('barbershop-barber.detail.placeholderPosition')"
+                >
+                </sw-text-field>
+                {% endblock %}
+
+                {% block barbershop_barber_detail_content_field_media %}
+                <sw-upload-listener
+                    :uploadTag="barber.id"
+                    autoUpload
+                    @media-upload-finish="setMediaItem"
+                >
+                </sw-upload-listener>
+                <sw-media-upload-v2
+                    variant="regular"
+                    :label="$tc('barbershop-barber.detail.labelPhoto')"
+                    :uploadTag="barber.id"
+                    :source="barber.mediaId"
+                    @media-upload-sidebar-open="onOpenMediaModal"
+                    @media-upload-remove-image="onUnlinkLogo"
+                >
+                </sw-media-upload-v2>
+                {% endblock %}
+
+                {% block barbershop_barber_detail_content_field_instagram %}
+                <sw-text-field
+                    v-model="barber.instagram"
+                    :label="$tc('barbershop-barber.detail.labelInstagram')"
+                    :placeholder="$tc('barbershop-barber.detail.placeholderInstagram')"
+                >
+                </sw-text-field>
+                {% endblock %}
+
+                {% block barbershop_barber_detail_content_field_facebook %}
+                <sw-text-field
+                    v-model="barber.facebook"
+                    :label="$tc('barbershop-barber.detail.labelFacebook')"
+                    :placeholder="$tc('barbershop-barber.detail.placeholderFacebook')"
+                >
+                </sw-text-field>
+                {% endblock %}
+            </sw-card>
+            {% endblock %}
+        </sw-card-view>
+    </template>
+    {% endblock %}
+</sw-page>
+{% endblock %}

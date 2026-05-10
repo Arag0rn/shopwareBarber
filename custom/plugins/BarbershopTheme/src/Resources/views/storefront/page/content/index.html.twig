@@ -128,24 +128,49 @@
                 <p class="bs-kicker">For true enjoyers of the atmosphere</p>
                 <h2>Our barbers</h2>
                 <div class="bs-card-grid">
-                    <article class="bs-barber-card">
-                        <div class="bs-photo bs-photo--barber-a"></div>
-                        <h3>John Smith</h3>
-                        <p>Extreme Barber</p>
-                        <div class="bs-icons"><a href="#">In</a><a href="#">Tw</a><a href="#">Fb</a><a href="#">Ln</a></div>
-                    </article>
-                    <article class="bs-barber-card">
-                        <div class="bs-photo bs-photo--barber-b"></div>
-                        <h3>Michele Doe</h3>
-                        <p>Extreme Barber</p>
-                        <div class="bs-icons"><a href="#">In</a><a href="#">Tw</a><a href="#">Fb</a><a href="#">Ln</a></div>
-                    </article>
-                    <article class="bs-barber-card">
-                        <div class="bs-photo bs-photo--barber-c"></div>
-                        <h3>Alan Black</h3>
-                        <p>Extreme Barber</p>
-                        <div class="bs-icons"><a href="#">In</a><a href="#">Tw</a><a href="#">Fb</a><a href="#">Ln</a></div>
-                    </article>
+                    {% set barbers = page.extensions.barbershopBarbers ?? null %}
+                    {% if barbers and barbers.count > 0 %}
+                        {% for barber in barbers %}
+                            <article class="bs-barber-card">
+                                {% if barber.media %}
+                                    <div class="bs-photo">
+                                        <img src="{{ barber.media.url }}" alt="{{ barber.name }}" loading="lazy">
+                                    </div>
+                                {% else %}
+                                    <div class="bs-photo bs-photo--barber-a"></div>
+                                {% endif %}
+                                <h3>{{ barber.name }}</h3>
+                                <p>{{ barber.position }}</p>
+                                <div class="bs-icons">
+                                    {% if barber.instagram %}
+                                        <a href="{{ barber.instagram }}" target="_blank" rel="noopener noreferrer">In</a>
+                                    {% endif %}
+                                    {% if barber.facebook %}
+                                        <a href="{{ barber.facebook }}" target="_blank" rel="noopener noreferrer">Fb</a>
+                                    {% endif %}
+                                </div>
+                            </article>
+                        {% endfor %}
+                    {% else %}
+                        <article class="bs-barber-card">
+                            <div class="bs-photo bs-photo--barber-a"></div>
+                            <h3>John Smith</h3>
+                            <p>Extreme Barber</p>
+                            <div class="bs-icons"><a href="#">In</a><a href="#">Tw</a><a href="#">Fb</a><a href="#">Ln</a></div>
+                        </article>
+                        <article class="bs-barber-card">
+                            <div class="bs-photo bs-photo--barber-b"></div>
+                            <h3>Michele Doe</h3>
+                            <p>Extreme Barber</p>
+                            <div class="bs-icons"><a href="#">In</a><a href="#">Tw</a><a href="#">Fb</a><a href="#">Ln</a></div>
+                        </article>
+                        <article class="bs-barber-card">
+                            <div class="bs-photo bs-photo--barber-c"></div>
+                            <h3>Alan Black</h3>
+                            <p>Extreme Barber</p>
+                            <div class="bs-icons"><a href="#">In</a><a href="#">Tw</a><a href="#">Fb</a><a href="#">Ln</a></div>
+                        </article>
+                    {% endif %}
                 </div>
             </div>
         </section>

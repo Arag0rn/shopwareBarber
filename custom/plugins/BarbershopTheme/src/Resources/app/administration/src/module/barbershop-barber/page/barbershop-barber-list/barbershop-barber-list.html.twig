@@ -1,0 +1,41 @@
+{% block barbershop_barber_list %}
+<sw-page class="barbershop-barber-list">
+    {% block barbershop_barber_list_smart_bar_header %}
+    <template #smart-bar-header>
+        <h2>
+            {{ $tc('barbershop-barber.list.title') }}
+        </h2>
+    </template>
+    {% endblock %}
+
+    {% block barbershop_barber_list_smart_bar_actions %}
+    <template #smart-bar-actions>
+        {% block barbershop_barber_list_smart_bar_actions_add %}
+        <sw-button
+            :routerLink="{ name: 'barbershop.barber.create' }"
+            variant="primary"
+        >
+            {{ $tc('barbershop-barber.list.buttonAddBarber') }}
+        </sw-button>
+        {% endblock %}
+    </template>
+    {% endblock %}
+
+    {% block barbershop_barber_list_content %}
+    <template #content>
+        {% block barbershop_barber_list_grid %}
+        <sw-entity-listing
+            v-if="barbers"
+            :items="barbers"
+            :repository="repository"
+            :showSelection="false"
+            :columns="columns"
+            detailRoute="barbershop.barber.detail"
+            @delete-item-finish="getList"
+        >
+        </sw-entity-listing>
+        {% endblock %}
+    </template>
+    {% endblock %}
+</sw-page>
+{% endblock %}
